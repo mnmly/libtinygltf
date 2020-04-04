@@ -6,11 +6,60 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		990E6CEB2437802A00205980 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 990E6CEA2437802A00205980 /* main.cpp */; };
+		99A2B28C24375C8A00E558A4 /* exposed-tinygltf.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B28B24375C8A00E558A4 /* exposed-tinygltf.h */; };
+		99A2B28E24375D6000E558A4 /* exposed-tinygltf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B28D24375D6000E558A4 /* exposed-tinygltf.cpp */; };
+		99A2B293243764D700E558A4 /* tiny_gltf.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B28F243764D700E558A4 /* tiny_gltf.h */; };
+		99A2B294243764D700E558A4 /* json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B290243764D700E558A4 /* json.hpp */; };
+		99A2B295243764D700E558A4 /* stb_image_write.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B291243764D700E558A4 /* stb_image_write.h */; };
+		99A2B296243764D700E558A4 /* stb_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B292243764D700E558A4 /* stb_image.h */; };
+		99C4ABA3243781CB00C0C235 /* libtinygltf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 99A2B28424375C0D00E558A4 /* libtinygltf.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		990E6CEF2437803600205980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99A2B27C24375C0D00E558A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99A2B28324375C0D00E558A4;
+			remoteInfo = tinygltf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		990E6CE62437802A00205980 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		990E6CE82437802A00205980 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		990E6CEA2437802A00205980 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		99A2B28424375C0D00E558A4 /* libtinygltf.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtinygltf.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A2B28B24375C8A00E558A4 /* exposed-tinygltf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "exposed-tinygltf.h"; sourceTree = "<group>"; };
+		99A2B28D24375D6000E558A4 /* exposed-tinygltf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "exposed-tinygltf.cpp"; sourceTree = "<group>"; };
+		99A2B28F243764D700E558A4 /* tiny_gltf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiny_gltf.h; path = "third-party/tinygltf/tiny_gltf.h"; sourceTree = "<group>"; };
+		99A2B290243764D700E558A4 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = "third-party/tinygltf/json.hpp"; sourceTree = "<group>"; };
+		99A2B291243764D700E558A4 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image_write.h; path = "third-party/tinygltf/stb_image_write.h"; sourceTree = "<group>"; };
+		99A2B292243764D700E558A4 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = "third-party/tinygltf/stb_image.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		990E6CE52437802A00205980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C4ABA3243781CB00C0C235 /* libtinygltf.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99A2B28224375C0D00E558A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -21,10 +70,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		990E6CE92437802A00205980 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				990E6CEA2437802A00205980 /* main.cpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		99A2B27B24375C0D00E558A4 = {
 			isa = PBXGroup;
 			children = (
+				99A2B28D24375D6000E558A4 /* exposed-tinygltf.cpp */,
+				99A2B297243764E800E558A4 /* tinygltf */,
+				990E6CE92437802A00205980 /* test */,
 				99A2B28524375C0D00E558A4 /* Products */,
+				99A2B28B24375C8A00E558A4 /* exposed-tinygltf.h */,
+				99C4ABA2243781CB00C0C235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -32,8 +94,27 @@
 			isa = PBXGroup;
 			children = (
 				99A2B28424375C0D00E558A4 /* libtinygltf.dylib */,
+				990E6CE82437802A00205980 /* test */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		99A2B297243764E800E558A4 /* tinygltf */ = {
+			isa = PBXGroup;
+			children = (
+				99A2B290243764D700E558A4 /* json.hpp */,
+				99A2B291243764D700E558A4 /* stb_image_write.h */,
+				99A2B292243764D700E558A4 /* stb_image.h */,
+				99A2B28F243764D700E558A4 /* tiny_gltf.h */,
+			);
+			name = tinygltf;
+			sourceTree = "<group>";
+		};
+		99C4ABA2243781CB00C0C235 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -43,12 +124,35 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A2B295243764D700E558A4 /* stb_image_write.h in Headers */,
+				99A2B296243764D700E558A4 /* stb_image.h in Headers */,
+				99A2B294243764D700E558A4 /* json.hpp in Headers */,
+				99A2B28C24375C8A00E558A4 /* exposed-tinygltf.h in Headers */,
+				99A2B293243764D700E558A4 /* tiny_gltf.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		990E6CE72437802A00205980 /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 990E6CEC2437802A00205980 /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				990E6CE42437802A00205980 /* Sources */,
+				990E6CE52437802A00205980 /* Frameworks */,
+				990E6CE62437802A00205980 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				990E6CF02437803600205980 /* PBXTargetDependency */,
+			);
+			name = test;
+			productName = test;
+			productReference = 990E6CE82437802A00205980 /* test */;
+			productType = "com.apple.product-type.tool";
+		};
 		99A2B28324375C0D00E558A4 /* tinygltf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99A2B28824375C0D00E558A4 /* Build configuration list for PBXNativeTarget "tinygltf" */;
@@ -72,9 +176,13 @@
 		99A2B27C24375C0D00E558A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "HIROAKI YAMANE";
 				TargetAttributes = {
+					990E6CE72437802A00205980 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					99A2B28324375C0D00E558A4 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -94,21 +202,63 @@
 			projectRoot = "";
 			targets = (
 				99A2B28324375C0D00E558A4 /* tinygltf */,
+				990E6CE72437802A00205980 /* test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		990E6CE42437802A00205980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				990E6CEB2437802A00205980 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99A2B28124375C0D00E558A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A2B28E24375D6000E558A4 /* exposed-tinygltf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		990E6CF02437803600205980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99A2B28324375C0D00E558A4 /* tinygltf */;
+			targetProxy = 990E6CEF2437803600205980 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		990E6CED2437802A00205980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GP3ES2Y53G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		990E6CEE2437802A00205980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GP3ES2Y53G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		99A2B28624375C0D00E558A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -221,6 +371,7 @@
 		99A2B28924375C0D00E558A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GP3ES2Y53G;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -228,12 +379,14 @@
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
 		};
 		99A2B28A24375C0D00E558A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GP3ES2Y53G;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -241,12 +394,22 @@
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		990E6CEC2437802A00205980 /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				990E6CED2437802A00205980 /* Debug */,
+				990E6CEE2437802A00205980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		99A2B27F24375C0D00E558A4 /* Build configuration list for PBXProject "tinygltf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
