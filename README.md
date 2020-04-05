@@ -1,3 +1,3 @@
-### tinyglTF prepping for C#
+### tinyglTF prepping for use in C#
 
-glTF library on [tinygltf](https://github.com/syoyo/tinygltf) exposing selected methods for running [glTF for Grasshopper]()
+Compiled [tinygltf](https://github.com/syoyo/tinygltf) to be used for running [glTF for Grasshopper]()
