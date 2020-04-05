@@ -45,7 +45,7 @@ ghAPI void tinygltfAddLineLoop( tinygltf::Model* model,
                                 int numVertices,
                                 bool _flipAxis );
 ghAPI void tinygltfSave( tinygltf::Model* model,
-                         char* filepath,
+                         char* filepath, bool useStream,
                         bool embedImages, bool embedBuffers,
                         bool prettyPrint, bool writeBinary );
 ghAPI void tinygltfDestory( tinygltf::Model* model );

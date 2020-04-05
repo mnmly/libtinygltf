@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
     uvs, numUvs,
     faces, numFaces, true);
 
-    tinygltfSave( model, p, false, true, true, true );
+    tinygltfSave( model, p, true, false, true, true, true );
     
 //    tinygltfDestory( model );
     return 0;

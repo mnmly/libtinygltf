@@ -188,7 +188,6 @@ ghAPI void tinygltfAddMesh(tinygltf::Model* model, const char *name, const char 
         totalLength += length;
     }
     buffer.data = dst;
-
     
     auto primitive = Primitive();
     primitive.indices = startAccessorIndex;
@@ -214,11 +213,21 @@ ghAPI void tinygltfAddMesh(tinygltf::Model* model, const char *name, const char 
 
 }
 
-ghAPI void tinygltfSave( tinygltf::Model* model, char* filepath, bool embedImages = false, bool embedBuffers = false, bool prettyPrint = true, bool writeBinary = false )
+ghAPI void tinygltfSave( tinygltf::Model* model, char* filepath, bool useStream, bool embedImages = false, bool embedBuffers = false, bool prettyPrint = true, bool writeBinary = false )
 {
     std::string output( filepath );
     tinygltf::TinyGLTF context;
-    context.WriteGltfSceneToFile(model, output, embedImages, embedBuffers, prettyPrint, writeBinary);
+    if (useStream) {
+        std::ofstream stream;
+        stream.open( output );
+        if (stream.is_open())
+        {
+            context.WriteGltfSceneToStream(model, stream, prettyPrint, writeBinary);
+        }
+    } else {
+        context.WriteGltfSceneToFile(model, output, embedImages, embedBuffers, prettyPrint, writeBinary);
+    }
+
 //    context.WriteGl
     delete model;
 }
