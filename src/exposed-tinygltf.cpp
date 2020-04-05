@@ -148,8 +148,8 @@ ghAPI void tinygltfAddMesh(tinygltf::Model* model, const char *name, const char 
          totalLength += length;
     }
     
-    std::vector<unsigned char> dst;
-    dst.reserve( totalLength );
+    std::vector<unsigned char> dst {};
+//    dst.reserve( totalLength );
     auto buffer = Buffer();
     totalLength = 0;
     for (auto i = 0; i < 4; i++ )
