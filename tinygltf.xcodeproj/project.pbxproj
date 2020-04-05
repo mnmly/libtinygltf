@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		990E6CEB2437802A00205980 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 990E6CEA2437802A00205980 /* main.cpp */; };
-		99A2B28C24375C8A00E558A4 /* exposed-tinygltf.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B28B24375C8A00E558A4 /* exposed-tinygltf.h */; };
-		99A2B28E24375D6000E558A4 /* exposed-tinygltf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B28D24375D6000E558A4 /* exposed-tinygltf.cpp */; };
+		994ABDCA243A3FAA005F40B5 /* exposed-tinygltf.h in Headers */ = {isa = PBXBuildFile; fileRef = 994ABDC7243A3FAA005F40B5 /* exposed-tinygltf.h */; };
+		994ABDCB243A3FAA005F40B5 /* exposed-tinygltf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 994ABDC9243A3FAA005F40B5 /* exposed-tinygltf.cpp */; };
 		99A2B293243764D700E558A4 /* tiny_gltf.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B28F243764D700E558A4 /* tiny_gltf.h */; };
 		99A2B294243764D700E558A4 /* json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B290243764D700E558A4 /* json.hpp */; };
 		99A2B295243764D700E558A4 /* stb_image_write.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2B291243764D700E558A4 /* stb_image_write.h */; };
@@ -42,9 +42,9 @@
 /* Begin PBXFileReference section */
 		990E6CE82437802A00205980 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		990E6CEA2437802A00205980 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		994ABDC7243A3FAA005F40B5 /* exposed-tinygltf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exposed-tinygltf.h"; sourceTree = "<group>"; };
+		994ABDC9243A3FAA005F40B5 /* exposed-tinygltf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "exposed-tinygltf.cpp"; sourceTree = "<group>"; };
 		99A2B28424375C0D00E558A4 /* libtinygltf.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtinygltf.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		99A2B28B24375C8A00E558A4 /* exposed-tinygltf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "exposed-tinygltf.h"; sourceTree = "<group>"; };
-		99A2B28D24375D6000E558A4 /* exposed-tinygltf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "exposed-tinygltf.cpp"; sourceTree = "<group>"; };
 		99A2B28F243764D700E558A4 /* tiny_gltf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiny_gltf.h; path = "third-party/tinygltf/tiny_gltf.h"; sourceTree = "<group>"; };
 		99A2B290243764D700E558A4 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = "third-party/tinygltf/json.hpp"; sourceTree = "<group>"; };
 		99A2B291243764D700E558A4 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image_write.h; path = "third-party/tinygltf/stb_image_write.h"; sourceTree = "<group>"; };
@@ -78,14 +78,30 @@
 			path = test;
 			sourceTree = "<group>";
 		};
+		994ABDC6243A3FAA005F40B5 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				994ABDC7243A3FAA005F40B5 /* exposed-tinygltf.h */,
+			);
+			path = includes;
+			sourceTree = "<group>";
+		};
+		994ABDC8243A3FAA005F40B5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				994ABDC9243A3FAA005F40B5 /* exposed-tinygltf.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		99A2B27B24375C0D00E558A4 = {
 			isa = PBXGroup;
 			children = (
-				99A2B28D24375D6000E558A4 /* exposed-tinygltf.cpp */,
+				994ABDC6243A3FAA005F40B5 /* includes */,
+				994ABDC8243A3FAA005F40B5 /* src */,
 				99A2B297243764E800E558A4 /* tinygltf */,
 				990E6CE92437802A00205980 /* test */,
 				99A2B28524375C0D00E558A4 /* Products */,
-				99A2B28B24375C8A00E558A4 /* exposed-tinygltf.h */,
 				99C4ABA2243781CB00C0C235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -125,9 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99A2B295243764D700E558A4 /* stb_image_write.h in Headers */,
+				994ABDCA243A3FAA005F40B5 /* exposed-tinygltf.h in Headers */,
 				99A2B296243764D700E558A4 /* stb_image.h in Headers */,
 				99A2B294243764D700E558A4 /* json.hpp in Headers */,
-				99A2B28C24375C8A00E558A4 /* exposed-tinygltf.h in Headers */,
 				99A2B293243764D700E558A4 /* tiny_gltf.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99A2B28E24375D6000E558A4 /* exposed-tinygltf.cpp in Sources */,
+				994ABDCB243A3FAA005F40B5 /* exposed-tinygltf.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
